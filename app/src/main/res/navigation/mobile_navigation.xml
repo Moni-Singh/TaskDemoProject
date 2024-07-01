@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_mainTab">
+    <fragment
+        android:id="@+id/navigation_login"
+        android:name="com.example.demotask.ui.auth.login.LoginFragment"
+        android:label="@string/title_login"
+        tools:layout="@layout/fragment_login" />
+
+    <fragment
+        android:id="@+id/navigation_mainTab"
+        android:name="com.example.demotask.ui.TabLayout.TabMainFragment"
+        android:label="@string/title_mainTab"
+        tools:layout="@layout/fragment_tab_main" />
+
+    <fragment
+        android:id="@+id/navigation_productDetails"
+        android:name="com.example.demotask.ui.tab.productDetails.ProductsDetailsFragment"
+        android:label="@string/title_ProductDetails"
+        tools:layout="@layout/fragment_products_details" />
+
+    <fragment
+        android:id="@+id/navigation_setting"
+        android:name="com.example.demotask.ui.setting.SettingFragment"
+        android:label="@string/setting"
+        tools:layout="@layout/fragment_setting"
+        />
+
+    <fragment
+        android:id="@+id/navigation_discover"
+        android:name="com.example.demotask.ui.tab.discover.DiscoverFragment"
+        android:label="@string/discover"
+        tools:layout="@layout/fragment_discover"
+        />
+
+</navigation>

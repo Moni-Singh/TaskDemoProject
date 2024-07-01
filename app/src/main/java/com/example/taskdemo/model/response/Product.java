@@ -1,8 +1,9 @@
 package com.example.taskdemo.model.response;
 
 import java.io.Serializable;
+import java.util.List;
 
-public class Products  implements Serializable {
+public class Product implements Serializable {
 
     private int id;
     private String title;
@@ -13,9 +14,12 @@ public class Products  implements Serializable {
     private Rating rating;
     private int type = 0;
     private boolean isLiked;
-    public Products(){};
+    private boolean isCategory = false;
+    private boolean isSlider =false;
+    private List<Product> productList;
+    public Product(){};
 
-    public Products(int id, String title, double price, String description, String category,boolean isLiked, String image, Rating rating,int type) {
+    public Product(int id, String title, double price, String description, String category, boolean isLiked, String image, Rating rating, int type) {
         this.id = id;
         this.title = title;
         this.price = price;
@@ -98,5 +102,27 @@ public class Products  implements Serializable {
         return type;
     }
 
+    public boolean isCategory() {
+        return isCategory;
+    }
 
+    public void setCategory(boolean category) {
+        isCategory = category;
+    }
+
+    public boolean isSlider() {
+        return isSlider;
+    }
+
+    public void setSlider(boolean slider) {
+        isSlider = slider;
+    }
+
+    public void setProductList(List<Product> productList) {
+        this.productList = productList;
+    }
+
+    public List<Product> getProductList() {
+        return productList;
+    }
 }

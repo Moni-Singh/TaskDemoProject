@@ -1,4 +1,4 @@
-package com.example.taskdemo.ui.tab.alpabetic;
+package com.example.taskdemo.ui.tab.discover;
 
 import androidx.lifecycle.ViewModelProvider;
 
@@ -14,24 +14,24 @@ import android.view.ViewGroup;
 
 import com.example.taskdemo.R;
 
-public class AlphabeticFragment extends Fragment {
+public class DiscoverFragment extends Fragment {
 
-    private AlphabeticViewModel mViewModel;
+    private DiscoverViewModel mViewModel;
 
-    public static AlphabeticFragment newInstance() {
-        return new AlphabeticFragment();
+    public static DiscoverFragment newInstance() {
+        return new DiscoverFragment();
     }
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_alphabetic, container, false);
+        return inflater.inflate(R.layout.fragment_discover, container, false);
     }
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mViewModel = new ViewModelProvider(this).get(AlphabeticViewModel.class);
+        mViewModel = new ViewModelProvider(this).get(DiscoverViewModel.class);
         // TODO: Use the ViewModel
     }
 
